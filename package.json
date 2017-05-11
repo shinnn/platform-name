@@ -1,7 +1,7 @@
 {
   "name": "platform-name",
   "version": "0.1.0",
-  "description": "Convert a Node.js platform identifier to the human-readable platform name: `aix` → `IBM AIX`",
+  "description": "Convert a Node.js platform identifier to the human-readable platform name: `openbsd` → `OpenBSD`",
   "repository": "shinnn/platform-name",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
@@ -16,6 +16,7 @@
     "platform",
     "name",
     "os",
+    "system",
     "id",
     "identifier",
     "convert",

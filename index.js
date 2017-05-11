@@ -4,7 +4,7 @@ var appendType = require('append-type');
 var ES6Map = require('es6-map');
 
 var map = new ES6Map([
-  ['aix', 'IBM AIX'],
+  ['aix', 'AIX'],
   ['android', 'Android'],
   ['darwin', 'macOS'],
   ['freebsd', 'FreeBSD'],

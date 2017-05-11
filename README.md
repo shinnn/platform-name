@@ -9,7 +9,7 @@ Convert a [Node.js platform identifier](https://nodejs.org/api/os.html#os_os_pla
 ```javascript
 const platformName = require('platform-name');
 
-platformName('aix'); //=> 'IBM AIX'
+platformName('aix'); //=> 'AIX'
 platformName('android'); //=> 'Android'
 platformName('darwin'); //=> 'macOS'
 platformName('freebsd'); //=> 'FreeBSD'
