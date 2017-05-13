@@ -24,8 +24,7 @@
     "readable"
   ],
   "dependencies": {
-    "append-type": "^1.0.0",
-    "es6-map": "^0.1.5"
+    "append-type": "^1.0.0"
   },
   "devDependencies": {
     "@shinnn/eslint-config-node-legacy": "^3.0.0",

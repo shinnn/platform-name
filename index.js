@@ -1,9 +1,8 @@
 'use strict';
 
 var appendType = require('append-type');
-var ES6Map = require('es6-map');
 
-var map = new ES6Map([
+var map = new Map([
   ['aix', 'AIX'],
   ['android', 'Android'],
   ['darwin', 'macOS'],
