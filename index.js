@@ -1,8 +1,8 @@
 'use strict';
 
-var appendType = require('append-type');
+const appendType = require('append-type');
 
-var map = new Map([
+const map = new Map([
   ['aix', 'AIX'],
   ['android', 'Android'],
   ['darwin', 'macOS'],
@@ -13,7 +13,7 @@ var map = new Map([
   ['win32', 'Windows']
 ]);
 
-var ERR = 'Expected a string one of `aix`, `android`, `darwin`, `freebsd`, `linux`, `openbsd`, `sunos` and `win32`';
+const ERR = 'Expected a string one of `aix`, `android`, `darwin`, `freebsd`, `linux`, `openbsd`, `sunos` and `win32`';
 
 module.exports = function platformName(id) {
   if (id === undefined) {
@@ -21,13 +21,13 @@ module.exports = function platformName(id) {
   }
 
   if (typeof id !== 'string') {
-    throw new TypeError(ERR + ', but got ' + appendType(id) + '.');
+    throw new TypeError(`${ERR}, but got ${appendType(id)}.`);
   }
 
-  var result = map.get(id);
+  const result = map.get(id);
 
   if (!result) {
-    throw new RangeError(ERR + ', but got ' + (id.length === 0 ? '\'\' (empty string)' : id) + '.');
+    throw new RangeError(`${ERR}, but got ${id.length === 0 ? '\'\' (empty string)' : id}.`);
   }
 
   return result;
