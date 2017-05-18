@@ -38,13 +38,24 @@ const platformName = require('platform-name');
 *id*: `string` (one of `aix` `android` `darwin` `freebsd` `linux` `openbsd` `sunos` `win32`)  
 Return: `string`
 
-Uses `process.platform` when it takes no arguments.
+Uses [`process.platform`](https://nodejs.org/api/process.html#process_process_platform) when it takes no arguments.
 
 ```javascript
 //On macOS
 
 platformName('linux'); //=> 'Linux'
 platformName(); //=> 'macOS'
+```
+
+### platformName.map
+
+Type: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+ID-name pairs used inside this module.
+
+```javascript
+platformName.map.size; //=> 8
+platformName.map.get('win32'); //=> 'Windows'
 ```
 
 ## License

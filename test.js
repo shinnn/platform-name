@@ -41,3 +41,13 @@ test('platformName()', t => {
 
   t.end();
 });
+
+test('platformName.map', t => {
+  t.strictEqual(platformName.map.get('android'), 'Android', 'should expose a Map.');
+
+  t.throws(() => {
+    platformName.map = null;
+  }, /Cannot assign to read only property 'map'/, 'should be unoverridable.');
+
+  t.end();
+});

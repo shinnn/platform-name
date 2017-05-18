@@ -32,3 +32,8 @@ module.exports = function platformName(id) {
 
   return result;
 };
+
+Object.defineProperty(module.exports, 'map', {
+  value: map,
+  enumerable: true
+});
