@@ -1,10 +1,10 @@
 # platform-name
 
-[![NPM version](https://img.shields.io/npm/v/platform-name.svg)](https://www.npmjs.com/package/platform-name)
+[![npm version](https://img.shields.io/npm/v/platform-name.svg)](https://www.npmjs.com/package/platform-name)
 [![Build Status](https://travis-ci.org/shinnn/platform-name.svg?branch=master)](https://travis-ci.org/shinnn/platform-name)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/platform-name.svg)](https://coveralls.io/github/shinnn/platform-name?branch=master)
 
-Convert a [Node.js platform identifier](https://nodejs.org/api/os.html#os_os_platform) to the human-readable platform name
+Convert a [Node.js platform identifier](https://nodejs.org/api/os.html#os_os_platform) into a human-readable platform name
 
 ```javascript
 const platformName = require('platform-name');
@@ -21,7 +21,7 @@ platformName('win32'); //=> 'Windows'
 
 ## Installation
 
-[Use npm.](https://docs.npmjs.com/cli/install)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
 
 ```
 npm install platform-name
@@ -54,10 +54,9 @@ Type: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global
 ID-name pairs used inside this module.
 
 ```javascript
-platformName.map.size; //=> 8
 platformName.map.get('win32'); //=> 'Windows'
 ```
 
 ## License
 
-[Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed)
+[ISC License](./LICENSE) © 2018 Shinnosuke Watanabe
