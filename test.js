@@ -23,7 +23,7 @@ test('platformName()', t => {
 
 	t.throws(
 		() => platformName(/Hi/),
-		/^TypeError.*Expected a string one of `aix`, `android`, `darwin`, `freebsd`, `linux`, `openbsd`, `sunos` and `win32`/,
+		/^TypeError.*Expected a string one of 'aix', 'android', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos' and 'win32'/,
 		'should throw an error when it takes a non-string value.'
 	);
 
@@ -34,8 +34,8 @@ test('platformName()', t => {
 	);
 
 	t.throws(
-		() => platformName('*'),
-		/^RangeError.* but got \*\./,
+		() => platformName('*\n\0'),
+		/^RangeError.* but got '\*\\n\\u0000'\./,
 		'should throw an error when it takes an unknown platform ID.'
 	);
 

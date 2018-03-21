@@ -1,6 +1,8 @@
 'use strict';
 
-const appendType = require('append-type');
+const inspect = require('util').inspect;
+
+const inspectWithKind = require('inspect-with-kind');
 
 const map = new Map([
 	['aix', 'AIX'],
@@ -13,7 +15,7 @@ const map = new Map([
 	['win32', 'Windows']
 ]);
 
-const ERR = 'Expected a string one of `aix`, `android`, `darwin`, `freebsd`, `linux`, `openbsd`, `sunos` and `win32`';
+const ERR = 'Expected a string one of \'aix\', \'android\', \'darwin\', \'freebsd\', \'linux\', \'openbsd\', \'sunos\' and \'win32\'';
 
 module.exports = function platformName(id) {
 	if (id === undefined) {
@@ -21,13 +23,13 @@ module.exports = function platformName(id) {
 	}
 
 	if (typeof id !== 'string') {
-		throw new TypeError(`${ERR}, but got ${appendType(id)}.`);
+		throw new TypeError(`${ERR}, but got a non-string value ${inspectWithKind(id)}.`);
 	}
 
 	const result = map.get(id);
 
 	if (!result) {
-		throw new RangeError(`${ERR}, but got ${id.length === 0 ? '\'\' (empty string)' : id}.`);
+		throw new RangeError(`${ERR}, but got ${id.length === 0 ? '\'\' (empty string)' : inspect(id)}.`);
 	}
 
 	return result;

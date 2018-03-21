@@ -24,11 +24,11 @@
 		"readable"
 	],
 	"dependencies": {
-		"append-type": "^1.0.1"
+		"inspect-with-kind": "^1.0.4"
 	},
 	"devDependencies": {
 		"@shinnn/eslint-config-node": "^5.0.0",
-		"eslint": "^4.19.0",
+		"eslint": "^4.19.1",
 		"nyc": "^11.6.0",
 		"pretend-platform": "^2.0.0",
 		"tape": "^4.9.0"
