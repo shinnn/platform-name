@@ -1,6 +1,6 @@
 {
 	"name": "platform-name",
-	"version": "0.6.0",
+	"version": "0.6.1",
 	"description": "Convert a Node.js platform identifier into a human-readable platform name: `openbsd` → `OpenBSD`",
 	"repository": "shinnn/platform-name",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
