@@ -39,6 +39,12 @@ test('platformName()', t => {
 		'should throw an error when it takes an unknown platform ID.'
 	);
 
+	t.throws(
+		() => platformName('a', 'b'),
+		/^RangeError.*Expected 0 or 1 argument \(\[<string>]\), but got 2 arguments\./,
+		'should throw an error when it takes too many arguments.'
+	);
+
 	t.end();
 });
 
