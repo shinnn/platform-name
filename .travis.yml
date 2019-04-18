@@ -3,4 +3,3 @@ branches:
 dist: xenial
 language: node_js
 node_js: node
-after_script: node_modules/.bin/nyc report --reporter=text-lcov | npx coveralls

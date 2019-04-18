@@ -1,8 +1,8 @@
 # platform-name
 
 [![npm version](https://img.shields.io/npm/v/platform-name.svg)](https://www.npmjs.com/package/platform-name)
-[![Build Status](https://travis-ci.org/shinnn/platform-name.svg?branch=master)](https://travis-ci.org/shinnn/platform-name)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/platform-name.svg)](https://coveralls.io/github/shinnn/platform-name?branch=master)
+[![Build Status](https://travis-ci.com/shinnn/platform-name.svg?branch=master)](https://travis-ci.com/shinnn/platform-name)
+[![codecov](https://codecov.io/gh/shinnn/platform-name/branch/master/graph/badge.svg)](https://codecov.io/gh/shinnn/platform-name)
 
 Convert a [Node.js platform identifier](https://nodejs.org/api/os.html#os_os_platform) into a human-readable platform name
 
@@ -21,7 +21,7 @@ platformName('win32'); //=> 'Windows'
 
 ## Installation
 
-[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install platform-name
@@ -49,7 +49,7 @@ platformName(); //=> 'macOS'
 
 ### platformName.map
 
-Type: [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)
+Type: `Map<string, string>`
 
 ID-name pairs used inside this module.
 
@@ -59,4 +59,4 @@ platformName.map.get('win32'); //=> 'Windows'
 
 ## License
 
-[ISC License](./LICENSE) © 2018 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 2018 - 2019 Shinnosuke Watanabe

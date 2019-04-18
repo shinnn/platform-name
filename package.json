@@ -5,8 +5,8 @@
 	"repository": "shinnn/platform-name",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
 	"scripts": {
-		"pretest": "eslint --fix --format=codeframe index.js test.js",
-		"test": "nyc --reporter=html --reporter=text node test.js"
+		"pretest": "eslint .",
+		"test": "coverage test.js"
 	},
 	"license": "ISC",
 	"files": [
@@ -27,13 +27,13 @@
 		"inspect-with-kind": "^1.0.4"
 	},
 	"devDependencies": {
-		"@shinnn/eslint-config-node": "^5.0.0",
-		"eslint": "^4.19.1",
-		"nyc": "^11.6.0",
-		"pretend-platform": "^2.0.0",
-		"tape": "^4.9.0"
+		"@shinnn/eslint-config": "^6.10.2",
+		"coverage": "^0.1.4",
+		"eslint": "^5.16.0",
+		"pretend-platform": "^3.0.0",
+		"tape": "^4.10.1"
 	},
 	"eslintConfig": {
-		"extends": "@shinnn/node"
+		"extends": "@shinnn"
 	}
 }

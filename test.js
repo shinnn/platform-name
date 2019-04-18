@@ -22,26 +22,26 @@ test('platformName()', t => {
 	pretendPlatform.restore();
 
 	t.throws(
-		() => platformName(/Hi/),
-		/^TypeError.*Expected a string one of 'aix', 'android', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos' and 'win32'/,
+		() => platformName(/Hi/u),
+		/^TypeError.*Expected a string one of 'aix', 'android', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos' and 'win32'/u,
 		'should throw an error when it takes a non-string value.'
 	);
 
 	t.throws(
 		() => platformName(''),
-		/^RangeError.* but got '' \(empty string\)\./,
+		/^RangeError.* but got '' \(empty string\)\./u,
 		'should throw an error when it takes an empty string.'
 	);
 
 	t.throws(
 		() => platformName('*\n\0'),
-		/^RangeError.* but got '\*\\n\\u0000'\./,
+		/^RangeError.* but got '\*\\n\\u0000'\./u,
 		'should throw an error when it takes an unknown platform ID.'
 	);
 
 	t.throws(
 		() => platformName('a', 'b'),
-		/^RangeError.*Expected 0 or 1 argument \(\[<string>]\), but got 2 arguments\./,
+		/^RangeError.*Expected 0 or 1 argument \(\[<string>\]\), but got 2 arguments\./u,
 		'should throw an error when it takes too many arguments.'
 	);
 
@@ -53,7 +53,7 @@ test('platformName.map', t => {
 
 	t.throws(() => {
 		platformName.map = null;
-	}, /Cannot assign to read only property 'map'/, 'should be unoverridable.');
+	}, /Cannot assign to read only property 'map'/u, 'should be unoverridable.');
 
 	t.end();
 });
